@@ -30,7 +30,7 @@ body {
 nav{
   background-color: $navback;
   color: $white;
-  height: 120px;
+  height: 7.5rem;
   width: 100vw;
   font-size: 5rem;          /*1rem = 16px*/
   padding-left: 1.5em;
@@ -38,5 +38,28 @@ nav{
   span{
     font-family: $bungee;
   }
-  
+  .fas{
+    float:right;
+    width: 0.5%;
+    height: 0.5%;
+    margin-right: -5.625rem;
+    margin-top: 2.5rem;
+    color: $red;
+  }
+  a{
+    font-size: 2rem;
+    float: right;
+    margin-top: 0.625rem;
+    font-family: $Source;
+    line-height: 1.25rem;
+  }
 }
+header{
+  background-color: $orange;
+}
+.avatar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
