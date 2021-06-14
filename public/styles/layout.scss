@@ -1,43 +1,41 @@
+@import "helper/variables"; 
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+ html {
+  box-sizing: border-box;
 }
-
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $Source;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-nav {
-  background-color: #4056A1;
-  color: #FFF;
+
+nav{
+  background-color: $navback;
+  color: $white;
   height: 120px;
   width: 100vw;
-  font-size: 5rem;
-  /*1rem = 16px*/
+  font-size: 5rem;          /*1rem = 16px*/
   padding-left: 1.5em;
   padding-right: 1.5em;
+  span{
+    font-family: $bungee;
+  }
 }
-
-nav span {
-  font-family: "Bungee", sans-serif;
-}
-/*# sourceMappingURL=layout.css.map */
