@@ -77,4 +77,47 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.container {
+  background-color: #f4f1ec;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#tweet-text {
+  width: 900px;
+  height: 100px;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn {
+  float: left;
+  background-color: #4152A1;
+  font-family: "Bungee", sans-serif;
+  color: #FFF;
+}
+
+.counter {
+  float: right;
+  font-family: "Bungee", sans-serif;
+}
 /*# sourceMappingURL=layout.css.map */
