@@ -11,7 +11,7 @@ $(document).ready(function () {
   console.log("page hass loaded & ready to be manipulated!");
   let input = document.querySelector('#tweet-text');;
   let count = document.querySelector('.counter');
-  //let tweetBtn = document.getElementByClassName("btn"); 
+  let tweetBtn = document.querySelector("#btn"); 
   input.addEventListener("keydown", () => {
     let humanInput = input.value;
     console.log(humanInput);
@@ -19,7 +19,7 @@ $(document).ready(function () {
    if(output > 140){
     count.innerHTML = 140 - output ;
      count.style.color = 'red';
-     $("#btn").attr("disabled");
+     tweetBtn.attr("disabled");     //this is not working..why? 
    } else {
      count.innerHTML = 140 - output ;
    }
