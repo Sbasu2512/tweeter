@@ -9,13 +9,14 @@ $(document).ready(function () {
     }
     return counter;
   }
-  
+
   let input = document.getElementById("tweet-text");
   let count = document.getElementsByClassName("counter");
 
-  document.addEventListener("keydown", () => {
+  input.addEventListener("keydown", () => {
     let humanInput = input.value;
+    console.log(humanInput);
     let output = counter(humanInput);
     count.innerHTML = output;
   });
-});
+}, false);
