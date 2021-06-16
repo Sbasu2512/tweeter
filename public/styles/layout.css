@@ -35,6 +35,7 @@ nav {
   /*1rem = 16px*/
   padding-left: 1.5em;
   padding-right: 1.5em;
+  position: fixed;
 }
 
 nav span {
@@ -91,13 +92,13 @@ header {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-#tweet-text {
+.container #tweet-text {
   width: 900px;
   height: 100px;
   position: relative;
@@ -107,17 +108,90 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
-.btn {
+.container .btn {
   float: left;
   background-color: #4152A1;
   font-family: "Bungee", sans-serif;
   color: #FFF;
 }
 
-.counter {
+.container .counter {
   float: right;
   font-family: "Bungee", sans-serif;
+}
+
+.container .tweet-container {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  border: 3px black solid;
+  width: 900px;
+  height: 200px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+.container .tweet-container .useravatar {
+  float: left;
+  height: 50px;
+  width: 50px;
+  clear: right;
+}
+
+.container .tweet-container .username {
+  float: left;
+  margin-left: 10px;
+}
+
+.container .tweet-container .tweetcontent {
+  margin-top: 100px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  float: left;
+}
+
+.container .tweet-container .datecreated {
+  float: left;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  margin-bottom: 10px;
+}
+
+.container .tweet-container .flag {
+  float: right;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.container .tweet-container .retweet {
+  float: right;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.container .tweet-container .like {
+  float: right;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.container .tweet-container hr {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
 }
 /*# sourceMappingURL=layout.css.map */

@@ -35,6 +35,7 @@ nav{
   font-size: 5rem;          /*1rem = 16px*/
   padding-left: 1.5em;
   padding-right: 1.5em;
+  position:fixed;
   span{
     font-family: $bungee;
   }
@@ -72,25 +73,84 @@ header{
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    flex-direction: row;
+    flex-direction: column;
+
+    #tweet-text{
+      width: 900px;
+      height: 100px;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      order: 1;
+    }
+
+    .btn{
+      float: left;
+      background-color: $buttonColor;
+      font-family: $bungee;
+      color: $white;
+    }
+  
+    .counter{
+      float: right;
+      font-family: $bungee;
+    }
+
+    .tweet-container{
+      flex-wrap: nowrap;
+      border: 3px black solid;
+      width: 900px;
+      height: 200px;
+      justify-content: space-evenly;
+      margin-top: 10px;
+    
+      .useravatar{
+      float: left;
+      height:50px;
+      width: 50px;
+      clear: right;
+      }
+
+      .username{
+        float: left;
+        margin-left: 10px;
+      }
+
+      .tweetcontent{
+        margin-top: 100px;
+        align-self: flex-end;
+        float: left;
+      }
+
+      .datecreated{
+        float: left;
+        align-self: baseline;
+        margin-bottom: 10px;
+      }
+      .flag{
+        float: right;
+        align-self: flex-end;
+        order: 1;
+      }
+      .retweet{
+        float: right;
+        align-self: flex-end;
+        order: 2;
+      }
+      .like{
+        float: right;
+        align-self: flex-end;
+        order: 3;
+      }
+      hr{
+        align-self: baseline;
+      }
+    }
+
+    
+
   }
 
-  #tweet-text{
-    width: 900px;
-    height: 100px;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-  }
+  
 
-  .btn{
-    float: left;
-    background-color: $buttonColor;
-    font-family: $bungee;
-    color: $white;
-  }
-
-  .counter{
-    float: right;
-    font-family: $bungee;
-  }
+  
