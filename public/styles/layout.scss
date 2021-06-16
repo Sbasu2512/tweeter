@@ -41,8 +41,8 @@ nav{
   }
   .fas{
     float:right;
-    width: 0.5%;
-    height: 0.5%;
+    width: 10px;
+    height: 10px;
     margin-right: -5.625rem;
     margin-top: 2.5rem;
     color: $red;
@@ -100,15 +100,14 @@ header{
       flex-wrap: nowrap;
       border: 3px black solid;
       width: 900px;
-      height: 200px;
+      height: 240px;
       justify-content: space-evenly;
-      margin-top: 10px;
+      margin: 50px 0px;
     
       .useravatar{
-      float: left;
-      height:50px;
-      width: 50px;
-      clear: right;
+        display: flex;
+        width: fit-content;
+        margin: 0.5em;
       }
 
       .username{
@@ -117,33 +116,46 @@ header{
       }
 
       .tweetcontent{
-        margin-top: 100px;
-        align-self: flex-end;
         float: left;
+        margin: 0.5em;
       }
 
-      .datecreated{
-        float: left;
-        align-self: baseline;
-        margin-bottom: 10px;
-      }
       .flag{
         float: right;
         align-self: flex-end;
-        order: 1;
+        order: 2;
+        height: 0.5px;
+        margin-bottom: 50px;
+        :hover{
+          color: yellow;
+        }
       }
       .retweet{
         float: right;
         align-self: flex-end;
         order: 2;
+
+        :hover{
+          color: yellow;
+        }
       }
       .like{
         float: right;
         align-self: flex-end;
         order: 3;
+
+        :hover{
+          color: yellow;
+        }
       }
       hr{
-        align-self: baseline;
+        margin-top: 70px;
+      }
+
+      .date-flags-container{
+        display: flex;
+      justify-content: space-between;
+      margin: 0.5em;
       }
     }
 
