@@ -36,6 +36,7 @@ nav {
   padding-left: 1.5em;
   padding-right: 1.5em;
   position: fixed;
+  z-index: 10;
 }
 
 nav span {
@@ -63,7 +64,7 @@ header {
   background-color: #D89939;
 }
 
-.avatar {
+header .avatar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,6 +78,28 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  top: 110px;
+  position: relative;
+  height: 300px;
+  width: 100vw;
+}
+
+header .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1.25em;
+  padding-left: 2em;
 }
 
 .container {
@@ -169,7 +192,7 @@ header {
 }
 
 .container .tweet-container .flag :hover {
-  color: yellow;
+  color: #CA9825;
 }
 
 .container .tweet-container .retweet {
@@ -182,7 +205,7 @@ header {
 }
 
 .container .tweet-container .retweet :hover {
-  color: yellow;
+  color: #CA9825;
 }
 
 .container .tweet-container .like {
@@ -195,7 +218,7 @@ header {
 }
 
 .container .tweet-container .like :hover {
-  color: yellow;
+  color: #CA9825;
 }
 
 .container .tweet-container hr {

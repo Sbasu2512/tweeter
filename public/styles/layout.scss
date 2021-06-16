@@ -36,6 +36,7 @@ nav{
   padding-left: 1.5em;
   padding-right: 1.5em;
   position:fixed;
+  z-index: 10;
   span{
     font-family: $bungee;
   }
@@ -57,14 +58,27 @@ nav{
 }
 header{
   background-color: $orange;
-}
+
 .avatar{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  }
+  top: 110px;
+  position: relative;
+  height: 300px;
+  width: 100vw;
+ }
 
+ .name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.25em;
+  padding-left: 2em;
+ }
+}
   .container{
     background-color: $bodyBG;
     width: 100%;
@@ -127,7 +141,7 @@ header{
         height: 0.5px;
         margin-bottom: 50px;
         :hover{
-          color: yellow;
+          color: $hoverColor;
         }
       }
       .retweet{
@@ -136,7 +150,7 @@ header{
         order: 2;
 
         :hover{
-          color: yellow;
+          color: $hoverColor;
         }
       }
       .like{
@@ -145,7 +159,7 @@ header{
         order: 3;
 
         :hover{
-          color: yellow;
+          color: $hoverColor;
         }
       }
       hr{
@@ -158,11 +172,4 @@ header{
       margin: 0.5em;
       }
     }
-
-    
-
   }
-
-  
-
-  

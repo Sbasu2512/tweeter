@@ -1,5 +1,6 @@
+//function to count chars 
 function charCounter(string) {
-  counter = 0;
+  counter = 1;
   for (let i = 0; i < string.length; i++) {
     counter++;
   }
@@ -13,9 +14,11 @@ $(document).ready(function () {
   let count = document.querySelector('.counter');
   let tweetBtn = document.querySelector("#btn"); 
   input.addEventListener("keydown", () => {
+    let key = count.keyCode || count.charCode ;
     let humanInput = input.value;
-    console.log(humanInput);
+    //console.log(humanInput);
     let output = charCounter(humanInput);
+    console.log(output);
    if(output > 140){
     count.innerHTML = 140 - output ;
      count.style.color = 'red';
