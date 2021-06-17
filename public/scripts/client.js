@@ -54,7 +54,7 @@ $(document).ready(function () {
   };
 
   const createTweetElement = (tweetObject) => {
-    console.log("tweet obj is: ", tweetObject["content"].text);
+    // console.log("tweet obj is: ", tweetObject["content"].text);
     const tweetTemplate = `<div class='tweet-container'>
   <div class='useravatar'>
     <p class='reincarnation'><img src ='${tweetObject["user"].avatars}'/></p>
@@ -86,3 +86,34 @@ const loadTweets = function() {
     .done(result => renderTweets(result))
     .fail(err => console.log(err));
 };
+
+$('.tweet-form').submit(function(event) {
+  event.preventDefault();
+  // first validate for empty/long tweets
+  const $tweetBox = $(this).find('#tweet-text');
+  const $counter = $(this).find('.counter');
+  const emptyMsg = $(this).siblings('.empty-tweet-err');
+  const longMsg = $(this).siblings('.long-tweet-err');
+  if ($tweetBox.val() === "") {
+    $(longMsg).slideUp(10);
+    $(emptyMsg).slideDown(200);
+  } else if ($tweetBox.val().length > 140) {
+    $(emptyMsg).slideUp(10);
+    $(longMsg).slideDown(200);
+  } else {
+    const tweetSerialized = $tweetBox.serialize();
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: tweetSerialized
+    })
+      .done(result => {
+        loadTweets();
+        $tweetBox.val('');
+        $counter.val(140);
+        $(emptyMsg).slideUp(100);
+        $(longMsg).slideUp(100);
+      })
+      .fail(err => console.log(err));
+  }
+});
