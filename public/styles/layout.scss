@@ -26,7 +26,10 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
+//nav
+// |->span
+// |->a
+// |->i class ='fas'
 nav{
   background-color: $navback;
   color: $white;
@@ -56,6 +59,9 @@ nav{
     line-height: 1.25rem;
   }
 }
+//header
+// |->div class="avatar"
+// |->div class="name" 
 header{
   background-color: $orange;
 
@@ -79,6 +85,10 @@ header{
   padding-left: 2em;
  }
 }
+//main class="container"
+// |->span
+// |->a
+// |->i class ='fas'
   .container{
     background-color: $bodyBG;
     width: 100%;
@@ -126,13 +136,17 @@ header{
         display: flex;
         width: fit-content;
         margin: 0.5em;
+
+        img.reincarnation {
+          margin-top: -33px;
       }
+     
 
       .username{
         float: left;
         margin-left: 10px;
       }
-
+    }
       .tweetcontent{
         float: left;
         margin: 0.5em;

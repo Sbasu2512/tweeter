@@ -174,7 +174,11 @@ header .name {
   margin: 0.5em;
 }
 
-.container .tweet-container .username {
+.container .tweet-container .useravatar img.reincarnation {
+  margin-top: -33px;
+}
+
+.container .tweet-container .useravatar .username {
   float: left;
   margin-left: 10px;
 }
