@@ -86,9 +86,29 @@ header{
  }
 }
 //main class="container"
-// |->span
-// |->a
-// |->i class ='fas'
+// |->section class= "new-tweet"
+// |         |->h2
+// |         |->form class="tweet-form"
+// |              |->text area class="tweet-text" 
+// |              |->div
+// |                  |->submit button class ="btn"
+// |                  |->counter class ="counter"
+// |
+// |->article class="tweets"
+//      |->div class="tweet-cotainer"
+//      |   |->div class = "useravatar"
+//      |       |-> p
+//      |       |   |->img class="reincarnation"
+//      |       |-> p class= "username" 
+//      |-> p class = "tweet-content"
+//      |-> hr
+//      |->div class = ".date-flags-container"
+//          |->p class = "dateCreated"
+//          |->div class="flags-container"
+//              |->p class ="like"
+//              |->p class ="retweet"
+//              |->p class ="flag"
+// 
   .container{
     background-color: $bodyBG;
     width: 100%;
