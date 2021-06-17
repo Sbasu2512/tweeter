@@ -57,7 +57,7 @@ $(document).ready(function () {
     // console.log("tweet obj is: ", tweetObject["content"].text);
     const tweetTemplate = `<div class='tweet-container'>
   <div class='useravatar'>
-    <p class='reincarnation'><img src ='${tweetObject["user"].avatars}'/></p>
+    <p><img class='reincarnation' src ='${tweetObject["user"].avatars}'/></p>
     <p class='username'>${tweetObject["user"].name}</p>
   </div>
    <p class='tweetcontent'>${tweetObject["content"].text}</p>  
@@ -83,17 +83,22 @@ const loadTweets = function() {
     method: 'GET',
     url: '/tweets'
   })
-    .done(result => renderTweets(result))
+    .done((result) => {
+      console.log(result)
+      renderTweets(result)
+    })
     .fail(err => console.log(err));
 };
+
+loadTweets();
 
 $('.tweet-form').submit(function(event) {
   event.preventDefault();
   // first validate for empty/long tweets
   const $tweetBox = $(this).find('#tweet-text');
   const $counter = $(this).find('.counter');
-  const emptyMsg = $(this).siblings('.empty-tweet-err');
-  const longMsg = $(this).siblings('.long-tweet-err');
+  // const emptyMsg = $(this).siblings('.empty-tweet-err');
+   const longMsg = $(this).siblings('.long-tweet-err');
   if ($tweetBox.val() === "") {
     $(longMsg).slideUp(10);
     $(emptyMsg).slideDown(200);
