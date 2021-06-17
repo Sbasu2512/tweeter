@@ -89,7 +89,7 @@ header{
 // |->section class= "new-tweet"
 // |         |->h2
 // |         |->form class="tweet-form"
-// |              |->text area class="tweet-text" 
+// |              |->text area id="tweet-text" 
 // |              |->div
 // |                  |->submit button class ="btn"
 // |                  |->counter class ="counter"
