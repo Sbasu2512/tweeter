@@ -9,7 +9,7 @@ function charCounter(string) {
 
 $(document).ready(function () {
   // --- our code goes here ---
-  console.log("page hass loaded & ready to be manipulated!");
+  //console.log("page hass loaded & ready to be manipulated!");
   let input = document.querySelector('#tweet-text');;
   let count = document.querySelector('.counter');
   let tweetBtn = document.querySelector("#btn"); 

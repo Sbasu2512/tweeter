@@ -160,6 +160,10 @@ header .name {
   margin: 50px 0px;
 }
 
+.container .tweet-container p.tweet {
+  margin: auto;
+}
+
 .container .tweet-container .useravatar {
   display: -webkit-box;
   display: -ms-flexbox;
