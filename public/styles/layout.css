@@ -259,22 +259,201 @@ body {
 
 @media only screen and (max-width: 1024px) {
   /* Write Tablet only CSS here */
-  .body {
+  body {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 0%;
-        grid-template-columns: 0%;
-    -ms-grid-rows: 40% 20% 40%;
-        grid-template-rows: 40% 20% 40%;
+    -ms-grid-rows: 10% 30% 20% 40%;
+        grid-template-rows: 10% 30% 20% 40%;
     row-gap: 1em;
   }
   nav {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #D89939;
+  }
+  nav span {
+    font-size: 2em;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin: 0.5em;
+    font-family: "Bungee", sans-serif;
+    color: #FFF;
+  }
+  nav a {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-right: -4em;
+    float: right;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #FFF;
+  }
+  nav .fas {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 2em;
+    margin-right: 4em;
+    color: #ED3D33;
+  }
+  header {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #D89939;
+  }
+  header h2 {
+    color: #FFF;
+  }
+  .container {
+    -ms-grid-row: 3;
+        grid-row-start: 3;
+    grid-row-end: 5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 3em;
+  }
+  .container .new-tweet h4 {
+    display: none;
+    color: red;
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .container .new-tweet h2 {
+    display: none;
+  }
+  .container .new-tweet #tweet-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 20em;
+  }
+  .container .new-tweet #tweet-form #tweet-text {
+    width: 100%;
+    margin: 0.5em;
+  }
+  .container .new-tweet #tweet-form div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .container .new-tweet #tweet-form div .btn {
+    color: #FFF;
+    font-family: "Bungee", sans-serif;
+    background-color: #4152A1;
+  }
+  .container .new-tweet #tweet-form div .counter {
+    font-family: "Bungee", sans-serif;
+  }
+  .container .tweets {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .container .tweets .tweet-container {
+    border: 2px black solid;
+  }
+  .container .tweets .tweet-container .useravatar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0.5em;
   }
 }
 /*# sourceMappingURL=layout.css.map */
