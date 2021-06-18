@@ -420,6 +420,7 @@ body {
 
       .tweet-container {
         border: 2px black solid;
+        margin: 0.5em;
 
         .useravatar {
           display: flex;
@@ -427,6 +428,51 @@ body {
           flex-wrap: nowrap;
           justify-content: space-between;
           margin: 0.5em;
+          .username {
+            margin-left: -13em;
+            margin-top: 1.5em;
+          }
+        }
+        .tweetcontent {
+          margin: 0.5em;
+        }
+        hr {
+          color: black;
+          border-bottom: 2px;
+          border-block-style: solid;
+        }
+        .date-flags-container {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-content: center;
+          justify-content: space-between;
+          align-items: center;
+          margin: 0.5em;
+
+          .flags-container {
+            display: flex;
+            flex-direction: row;
+
+            .like {
+              margin: 0.5em;
+              :hover {
+                color: $hoverColor;
+              }
+            }
+            .retweet {
+              margin: 0.5em;
+              :hover {
+                color: $hoverColor;
+              }
+            }
+            .flag {
+              margin: 0.5em;
+              :hover {
+                color: $hoverColor;
+              }
+            }
+          }
         }
       }
     }

@@ -439,6 +439,7 @@ body {
   }
   .container .tweets .tweet-container {
     border: 2px black solid;
+    margin: 0.5em;
   }
   .container .tweets .tweet-container .useravatar {
     display: -webkit-box;
@@ -454,6 +455,65 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 0.5em;
+  }
+  .container .tweets .tweet-container .useravatar .username {
+    margin-left: -13em;
+    margin-top: 1.5em;
+  }
+  .container .tweets .tweet-container .tweetcontent {
+    margin: 0.5em;
+  }
+  .container .tweets .tweet-container hr {
+    color: black;
+    border-bottom: 2px;
+    border-block-style: solid;
+  }
+  .container .tweets .tweet-container .date-flags-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0.5em;
+  }
+  .container .tweets .tweet-container .date-flags-container .flags-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container .tweets .tweet-container .date-flags-container .flags-container .like {
+    margin: 0.5em;
+  }
+  .container .tweets .tweet-container .date-flags-container .flags-container .like :hover {
+    color: #CA9825;
+  }
+  .container .tweets .tweet-container .date-flags-container .flags-container .retweet {
+    margin: 0.5em;
+  }
+  .container .tweets .tweet-container .date-flags-container .flags-container .retweet :hover {
+    color: #CA9825;
+  }
+  .container .tweets .tweet-container .date-flags-container .flags-container .flag {
+    margin: 0.5em;
+  }
+  .container .tweets .tweet-container .date-flags-container .flags-container .flag :hover {
+    color: #CA9825;
   }
 }
 /*# sourceMappingURL=layout.css.map */
