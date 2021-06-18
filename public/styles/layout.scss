@@ -14,180 +14,124 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
-  height: 100%;
   color: $bodyColour;
   background-color: $bodyBG;
   font-size: 24px;
   font-family: $Source;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: 4.16em 30% 30% 20%;
-  column-gap: 2em;
-  //row-gap: 2em;
-  justify-items: stretch;
+  height: 100%;
 }
 
 /*
+ * Global layout stuff
+ */
+
+@media only screen and (min-width: 1025px) {
+  body {
+    
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 4.16em 30% 30% 20%;
+    column-gap: 2em;
+    justify-items: stretch;
+  }
+
+  /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- /****
+  /****
  * desktop styles
  ***/
 
+  //nav
+  // |->span
+  // |->a
+  // |->i class ='fas'
+  nav {
+    //parent container
+    background-color: $navback;
+    color: $white;
+    height: 8rem;
+    width: 100%;
+    font-size: 5rem; /*1rem = 16px*/
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    position: fixed;
+    z-index: 10;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
-//nav
-// |->span
-// |->a
-// |->i class ='fas'
-nav {
-  //parent container
-  background-color: $navback;
-  color: $white;
-  height: 8rem;
-  width: 100%;
-  font-size: 5rem; /*1rem = 16px*/
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  position: fixed;
-  z-index: 10;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-
-  span {
-    align-self: center;
-    justify-self: flex-start;
-    float: left;
-    clear: right;
-    font-family: $bungee;
-    line-height: 1em;
-    order: 1;
-    flex-grow: 3;
-  }
-  a {
-    order: 2;
-    font-size: 0.5em;
-    float: right;
-    margin-right: -3em;
-  }
-  .fas {
-    order: 3;
-    color: $red;
-    font-size: 0.5em;
-    margin-top: 2em;
-  }
-}
-
-//header
-// |->div class="avatar"
-// |->div class="name"
-header {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  background-color: $orange;
-  margin-top: 0em;
-
-  .avatar {
-    top: 10%;
-    margin-top: 8em;
-    justify-content: center;
-    margin-left: 5em;
-
-    img {
-      margin-top: -6em;
+    span {
+      align-self: center;
+      justify-self: flex-start;
+      float: left;
+      clear: right;
+      font-family: $bungee;
+      line-height: 1em;
+      order: 1;
+      flex-grow: 3;
+    }
+    a {
+      order: 2;
+      font-size: 0.5em;
+      float: right;
+      margin-right: -3em;
+    }
+    .fas {
+      order: 3;
+      color: $red;
+      font-size: 0.5em;
+      margin-top: 2em;
     }
   }
-  h2 {
-    margin-left: 4em;
+
+  //header
+  // |->div class="avatar"
+  // |->div class="name"
+  header {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: $orange;
     margin-top: 0em;
-    color: $white;
-  }
-}
 
-//main class="container"
-// |->section class= "new-tweet"
-// |         |->h2
-// |         |->h4 class="empty-tweet-err"
-// |         |->h4 class="long-tweet-err"
-// |         |->form class="tweet-form"
-// |              |->text area id="tweet-text"
-// |              |->div
-// |                  |->submit button class ="btn"
-// |                  |->counter class ="counter"
-// |
-// |->article class="tweets"
-//      |->div class="tweet-container"
-//      |   |->div class = "useravatar"
-//      |       |-> p
-//      |       |   |->img class="reincarnation"
-//      |       |-> p class= "username"
-//      |-> p class = "tweet-content"
-//      |-> hr
-//      |->div class = ".date-flags-container"
-//          |->p class = "dateCreated"
-//          |->div class="flags-container"
-//              |->p class ="like"
-//              |->p class ="retweet"
-//              |->p class ="flag"
-//
-.container {
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+    .avatar {
+      top: 10%;
+      margin-top: 8em;
+      justify-content: center;
+      margin-left: 5em;
 
-  .new-tweet {
-    width: 80%;
-    h4 {
-      color: $red;
-      font-size: 1em;
-      margin-top: 1em;
-      display: none;
+      img {
+        margin-top: -6em;
+      }
     }
     h2 {
-      font-size: 4em;
-      display: none;
-    }
-    #tweet-form {
-      margin-top: 4em;
-
-      #tweet-text {
-        width: 80%;
-        height: 50%;
-      }
-      .btn {
-        background-color: $buttonColor;
-        font-family: $bungee;
-        color: $white;
-        margin: 0.5em;
-        float: left;
-      }
-      .counter {
-        font-family: $bungee;
-        margin-right: 5.5em;
-        float: right;
-      }
+      margin-left: 4em;
+      margin-top: 0em;
+      color: $white;
     }
   }
 
-  //article class="tweets"
-  //|->article class="tweets"
+  //main class="container"
+  // |->section class= "new-tweet"
+  // |         |->h2
+  // |         |->h4 class="empty-tweet-err"
+  // |         |->h4 class="long-tweet-err"
+  // |         |->form class="tweet-form"
+  // |              |->text area id="tweet-text"
+  // |              |->div
+  // |                  |->submit button class ="btn"
+  // |                  |->counter class ="counter"
+  // |
+  // |->article class="tweets"
   //      |->div class="tweet-container"
   //      |   |->div class = "useravatar"
   //      |       |-> p
@@ -202,98 +146,155 @@ header {
   //              |->p class ="retweet"
   //              |->p class ="flag"
   //
-  .tweets {
+  .container {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
 
-    .tweet-container {
-      border: 2px black solid;
-      margin-top: 1em;
+    .new-tweet {
+      width: 80%;
+      h4 {
+        color: $red;
+        font-size: 1em;
+        margin-top: 1em;
+        display: none;
+      }
+      h2 {
+        font-size: 4em;
+        display: none;
+      }
+      #tweet-form {
+        margin-top: 4em;
 
-      .useravatar {
-        margin: 0.5em;
-        // flex-direction: row;
-
-        p {
-          float: left;
-          //order: 1;
+        #tweet-text {
+          width: 80%;
+          height: 50%;
         }
-        .username {
-          //order: 2;
+        .btn {
+          background-color: $buttonColor;
+          font-family: $bungee;
+          color: $white;
           margin: 0.5em;
+          float: left;
         }
-
-        .handle {
+        .counter {
+          font-family: $bungee;
+          margin-right: 5.5em;
           float: right;
         }
       }
-      .tweetcontent {
-        // align-self: baseline;
-        margin-top: 5em;
-      }
-      .date-flags-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    }
 
-        .datecreated {
+    //article class="tweets"
+    //|->article class="tweets"
+    //      |->div class="tweet-container"
+    //      |   |->div class = "useravatar"
+    //      |       |-> p
+    //      |       |   |->img class="reincarnation"
+    //      |       |-> p class= "username"
+    //      |-> p class = "tweet-content"
+    //      |-> hr
+    //      |->div class = ".date-flags-container"
+    //          |->p class = "dateCreated"
+    //          |->div class="flags-container"
+    //              |->p class ="like"
+    //              |->p class ="retweet"
+    //              |->p class ="flag"
+    //
+    .tweets {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      .tweet-container {
+        border: 2px black solid;
+        margin-top: 1em;
+
+        .useravatar {
           margin: 0.5em;
-        }
+          // flex-direction: row;
 
-        .flags-container {
+          p {
+            float: left;
+            //order: 1;
+          }
+          .username {
+            //order: 2;
+            margin: 0.5em;
+          }
+
+          .handle {
+            float: right;
+          }
+        }
+        .tweetcontent {
+          // align-self: baseline;
+          margin-top: 5em;
+        }
+        .date-flags-container {
           display: flex;
           flex-direction: row;
-          margin: 0.5em;
-        }
+          justify-content: space-between;
 
-        p{
-          margin: 0.1em;
-          :hover{
-            color: $hoverColor;
+          .datecreated {
+            margin: 0.5em;
           }
-        }
 
-        p{
-          margin: 0.1em;
-          :hover{
-            color: $hoverColor;
+          .flags-container {
+            display: flex;
+            flex-direction: row;
+            margin: 0.5em;
           }
-        }
 
-        p{
-          margin: 0.1em;
-          :hover{
-            color: $hoverColor;
+          p {
+            margin: 0.1em;
+            :hover {
+              color: $hoverColor;
+            }
+          }
+
+          p {
+            margin: 0.1em;
+            :hover {
+              color: $hoverColor;
+            }
+          }
+
+          p {
+            margin: 0.1em;
+            :hover {
+              color: $hoverColor;
+            }
           }
         }
       }
     }
   }
 }
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   /* Write Tablet only CSS here */
-  .body{
+  .body {
+    display: grid;
     grid-template-columns: 0%;
-    grid-template-rows: 40% 20% 40% ;
+    grid-template-rows: 40% 20% 40%;
     row-gap: 1em;
   }
   //nav
   // |->span
   // |->a
   // |->i class ='fas'
-  nav{
+  nav {
     display: flex;
     justify-content: space-between;
-    span{
-
-    }
   }
   //header
   // |->div class="avatar"
   // |->div class="name"
-  
+
   //main class="container"
   // |->section class= "new-tweet"
   // |         |->h2

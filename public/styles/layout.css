@@ -15,278 +15,253 @@ html {
           box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
 body {
-  height: 100%;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 40% 60%;
-      grid-template-columns: 40% 60%;
-  -ms-grid-rows: 4.16em 30% 30% 20%;
-      grid-template-rows: 4.16em 30% 30% 20%;
-  -webkit-column-gap: 2em;
-          column-gap: 2em;
-  justify-items: stretch;
+  height: 100%;
 }
 
 /*
+ * Global layout stuff
+ */
+@media only screen and (min-width: 1025px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+    -ms-grid-rows: 4.16em 30% 30% 20%;
+        grid-template-rows: 4.16em 30% 30% 20%;
+    -webkit-column-gap: 2em;
+            column-gap: 2em;
+    justify-items: stretch;
+  }
+  /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-/****
+  /****
  * desktop styles
  ***/
-nav {
-  background-color: #4056A1;
-  color: #FFF;
-  height: 8rem;
-  width: 100%;
-  font-size: 5rem;
-  /*1rem = 16px*/
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  position: fixed;
-  z-index: 10;
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 3;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  grid-row-end: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  nav {
+    background-color: #4056A1;
+    color: #FFF;
+    height: 8rem;
+    width: 100%;
+    font-size: 5rem;
+    /*1rem = 16px*/
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    position: fixed;
+    z-index: 10;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav span {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    justify-self: flex-start;
+    float: left;
+    clear: right;
+    font-family: "Bungee", sans-serif;
+    line-height: 1em;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+  }
+  nav a {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    font-size: 0.5em;
+    float: right;
+    margin-right: -3em;
+  }
+  nav .fas {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    color: #ED3D33;
+    font-size: 0.5em;
+    margin-top: 2em;
+  }
+  header {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 2;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: #D89939;
+    margin-top: 0em;
+  }
+  header .avatar {
+    top: 10%;
+    margin-top: 8em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 5em;
+  }
+  header .avatar img {
+    margin-top: -6em;
+  }
+  header h2 {
+    margin-left: 4em;
+    margin-top: 0em;
+    color: #FFF;
+  }
+  .container {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 2;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .new-tweet {
+    width: 80%;
+  }
+  .container .new-tweet h4 {
+    color: #ED3D33;
+    font-size: 1em;
+    margin-top: 1em;
+    display: none;
+  }
+  .container .new-tweet h2 {
+    font-size: 4em;
+    display: none;
+  }
+  .container .new-tweet #tweet-form {
+    margin-top: 4em;
+  }
+  .container .new-tweet #tweet-form #tweet-text {
+    width: 80%;
+    height: 50%;
+  }
+  .container .new-tweet #tweet-form .btn {
+    background-color: #4152A1;
+    font-family: "Bungee", sans-serif;
+    color: #FFF;
+    margin: 0.5em;
+    float: left;
+  }
+  .container .new-tweet #tweet-form .counter {
+    font-family: "Bungee", sans-serif;
+    margin-right: 5.5em;
+    float: right;
+  }
+  .container .tweets {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .container .tweets .tweet-container {
+    border: 2px black solid;
+    margin-top: 1em;
+  }
+  .container .tweets .tweet-container .useravatar {
+    margin: 0.5em;
+  }
+  .container .tweets .tweet-container .useravatar p {
+    float: left;
+  }
+  .container .tweets .tweet-container .useravatar .username {
+    margin: 0.5em;
+  }
+  .container .tweets .tweet-container .useravatar .handle {
+    float: right;
+  }
+  .container .tweets .tweet-container .tweetcontent {
+    margin-top: 5em;
+  }
+  .container .tweets .tweet-container .date-flags-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .container .tweets .tweet-container .date-flags-container .datecreated {
+    margin: 0.5em;
+  }
+  .container .tweets .tweet-container .date-flags-container .flags-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0.5em;
+  }
+  .container .tweets .tweet-container .date-flags-container p {
+    margin: 0.1em;
+  }
+  .container .tweets .tweet-container .date-flags-container p :hover {
+    color: #CA9825;
+  }
+  .container .tweets .tweet-container .date-flags-container p {
+    margin: 0.1em;
+  }
+  .container .tweets .tweet-container .date-flags-container p :hover {
+    color: #CA9825;
+  }
+  .container .tweets .tweet-container .date-flags-container p {
+    margin: 0.1em;
+  }
+  .container .tweets .tweet-container .date-flags-container p :hover {
+    color: #CA9825;
+  }
 }
 
-nav span {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  justify-self: flex-start;
-  float: left;
-  clear: right;
-  font-family: "Bungee", sans-serif;
-  line-height: 1em;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  -webkit-box-flex: 3;
-      -ms-flex-positive: 3;
-          flex-grow: 3;
-}
-
-nav a {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  font-size: 0.5em;
-  float: right;
-  margin-right: -3em;
-}
-
-nav .fas {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  color: #ED3D33;
-  font-size: 0.5em;
-  margin-top: 2em;
-}
-
-header {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 2;
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  grid-row-end: 3;
-  background-color: #D89939;
-  margin-top: 0em;
-}
-
-header .avatar {
-  top: 10%;
-  margin-top: 8em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-left: 5em;
-}
-
-header .avatar img {
-  margin-top: -6em;
-}
-
-header h2 {
-  margin-left: 4em;
-  margin-top: 0em;
-  color: #FFF;
-}
-
-.container {
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  grid-column-end: 2;
-  -ms-grid-row: 2;
-      grid-row-start: 2;
-  grid-row-end: 3;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.container .new-tweet {
-  width: 80%;
-}
-
-.container .new-tweet h4 {
-  color: #ED3D33;
-  font-size: 1em;
-  margin-top: 1em;
-  display: none;
-}
-
-.container .new-tweet h2 {
-  font-size: 4em;
-  display: none;
-}
-
-.container .new-tweet #tweet-form {
-  margin-top: 4em;
-}
-
-.container .new-tweet #tweet-form #tweet-text {
-  width: 80%;
-  height: 50%;
-}
-
-.container .new-tweet #tweet-form .btn {
-  background-color: #4152A1;
-  font-family: "Bungee", sans-serif;
-  color: #FFF;
-  margin: 0.5em;
-  float: left;
-}
-
-.container .new-tweet #tweet-form .counter {
-  font-family: "Bungee", sans-serif;
-  margin-right: 5.5em;
-  float: right;
-}
-
-.container .tweets {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
-.container .tweets .tweet-container {
-  border: 2px black solid;
-  margin-top: 1em;
-}
-
-.container .tweets .tweet-container .useravatar {
-  margin: 0.5em;
-}
-
-.container .tweets .tweet-container .useravatar p {
-  float: left;
-}
-
-.container .tweets .tweet-container .useravatar .username {
-  margin: 0.5em;
-}
-
-.container .tweets .tweet-container .useravatar .handle {
-  float: right;
-}
-
-.container .tweets .tweet-container .tweetcontent {
-  margin-top: 5em;
-}
-
-.container .tweets .tweet-container .date-flags-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.container .tweets .tweet-container .date-flags-container .datecreated {
-  margin: 0.5em;
-}
-
-.container .tweets .tweet-container .date-flags-container .flags-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 0.5em;
-}
-
-.container .tweets .tweet-container .date-flags-container p {
-  margin: 0.1em;
-}
-
-.container .tweets .tweet-container .date-flags-container p :hover {
-  color: #CA9825;
-}
-
-.container .tweets .tweet-container .date-flags-container p {
-  margin: 0.1em;
-}
-
-.container .tweets .tweet-container .date-flags-container p :hover {
-  color: #CA9825;
-}
-
-.container .tweets .tweet-container .date-flags-container p {
-  margin: 0.1em;
-}
-
-.container .tweets .tweet-container .date-flags-container p :hover {
-  color: #CA9825;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   /* Write Tablet only CSS here */
   .body {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: 0%;
         grid-template-columns: 0%;
     -ms-grid-rows: 40% 20% 40%;
