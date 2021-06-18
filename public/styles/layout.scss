@@ -20,6 +20,7 @@ body {
   font-size: 24px;
   font-family: $Source;
   height: 100%;
+  width: 100vw;
 }
 
 /*
@@ -31,8 +32,8 @@ body {
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 4.16em 30% 30% 20%;
-    column-gap: 2em;
-    justify-items: stretch;
+    column-gap: 1em;
+    row-gap: 1em;
   }
 
   /*
@@ -98,9 +99,16 @@ body {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-end: 4;
     background-color: $orange;
-    margin-top: 0em;
+    margin-top: 2em;
+    margin-left: 0.5em;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    /* align-content: center; */
+    justify-content: center;
+    align-items: center;
 
     .avatar {
       top: 10%;
@@ -110,11 +118,12 @@ body {
 
       img {
         margin-top: -6em;
+        margin-left: -2em;
       }
     }
     h2 {
-      margin-left: 4em;
-      margin-top: 0em;
+      margin-left: 1em;
+      margin-top: -0.5em;
       color: $white;
     }
   }
@@ -421,6 +430,7 @@ body {
       .tweet-container {
         border: 2px black solid;
         margin: 0.5em;
+        width: 80%;
 
         .useravatar {
           display: flex;
@@ -455,19 +465,19 @@ body {
             flex-direction: row;
 
             .like {
-              margin: 0.5em;
+              margin: 0.2em;
               :hover {
                 color: $hoverColor;
               }
             }
             .retweet {
-              margin: 0.5em;
+              margin: 0.2em;
               :hover {
                 color: $hoverColor;
               }
             }
             .flag {
-              margin: 0.5em;
+              margin: 0.2em;
               :hover {
                 color: $hoverColor;
               }

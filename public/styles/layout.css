@@ -21,6 +21,7 @@ body {
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
   height: 100%;
+  width: 100vw;
 }
 
 /*
@@ -34,9 +35,9 @@ body {
         grid-template-columns: 40% 60%;
     -ms-grid-rows: 4.16em 30% 30% 20%;
         grid-template-rows: 4.16em 30% 30% 20%;
-    -webkit-column-gap: 2em;
-            column-gap: 2em;
-    justify-items: stretch;
+    -webkit-column-gap: 1em;
+            column-gap: 1em;
+    row-gap: 1em;
   }
   /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
@@ -113,9 +114,25 @@ body {
     grid-column-end: 2;
     -ms-grid-row: 2;
         grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-end: 4;
     background-color: #D89939;
-    margin-top: 0em;
+    margin-top: 2em;
+    margin-left: 0.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* flex-wrap: nowrap; */
+    /* align-content: center; */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   header .avatar {
     top: 10%;
@@ -127,10 +144,11 @@ body {
   }
   header .avatar img {
     margin-top: -6em;
+    margin-left: -2em;
   }
   header h2 {
-    margin-left: 4em;
-    margin-top: 0em;
+    margin-left: 1em;
+    margin-top: -0.5em;
     color: #FFF;
   }
   .container {
@@ -440,6 +458,7 @@ body {
   .container .tweets .tweet-container {
     border: 2px black solid;
     margin: 0.5em;
+    width: 80%;
   }
   .container .tweets .tweet-container .useravatar {
     display: -webkit-box;
@@ -498,19 +517,19 @@ body {
             flex-direction: row;
   }
   .container .tweets .tweet-container .date-flags-container .flags-container .like {
-    margin: 0.5em;
+    margin: 0.2em;
   }
   .container .tweets .tweet-container .date-flags-container .flags-container .like :hover {
     color: #CA9825;
   }
   .container .tweets .tweet-container .date-flags-container .flags-container .retweet {
-    margin: 0.5em;
+    margin: 0.2em;
   }
   .container .tweets .tweet-container .date-flags-container .flags-container .retweet :hover {
     color: #CA9825;
   }
   .container .tweets .tweet-container .date-flags-container .flags-container .flag {
-    margin: 0.5em;
+    margin: 0.2em;
   }
   .container .tweets .tweet-container .date-flags-container .flags-container .flag :hover {
     color: #CA9825;
