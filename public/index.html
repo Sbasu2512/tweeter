@@ -54,8 +54,11 @@
    <!-- Page-specific (main) content here  -->
    <main class="container">
     <section class="new-tweet">
+      <h4 class="empty-tweet-err">You cannot send an empty tweet!</h4>
+      <h4 class="long-tweet-err">Your message is too long! Keep it under 140 characters.</h4>
+
       <h2>Compose Tweet</h2>
-      <form Content-Type ='application/x-www-form-urlencoded' method='POST' action='/tweets/' class='tweet-form'>
+      <form Content-Type ='application/x-www-form-urlencoded' method='POST' action='/tweets/' id='tweet-form'>
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div>
           <button class="btn" type="submit">Tweet</button>

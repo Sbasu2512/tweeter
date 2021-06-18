@@ -28,27 +28,11 @@ let tweetData = [
   }
 ]
 
-/*
- * Define another function renderTweets in the same file. This function can be responsible for taking in an array of tweet objects and then appending each one to the #tweets-container. In order to do this, the renderTweets will need to leverage the createTweetElement function you wrote earlier by passing the tweet object to it, then using the returned jQuery object by appending it to the #tweets-container section.
- */
-
 $(document).ready(function () {
-  // let dateShow = document.querySelector(".datecreated");
-  // dateShow.innerHTML = timeago.format(new Date());
-  // const $tweet = createTweetElement(tweetData);
-  //$('.tweetcontent').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-
-  // Test / driver code (temporary)
-  //console.log($tweet); // to see what it looks like
-
-  const renderTweets = function (arr) {
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
+  
+  function renderTweets(arr)  {
     for (let element of arr) {
-      //console.log(element['content']);
       const tweet = createTweetElement(element);
-      // document.querySelector('.tweet-container').innerHTML = tweet;
       $(".tweets").append(tweet);
     }
   };
@@ -59,8 +43,9 @@ $(document).ready(function () {
   <div class='useravatar'>
     <p><img class='reincarnation' src ='${tweetObject["user"].avatars}'/></p>
     <p class='username'>${tweetObject["user"].name}</p>
+    <p class="handle">${tweetObject["user"].handle}</p>
   </div>
-   <p class='tweetcontent'>${tweetObject["content"].text}</p>  
+   <p class='tweetcontent'>${escape(tweetObject["content"].text)}</p>  
   <hr>
   <div class='date-flags-container'>
     <p class='datecreated'>${timeago.format(tweetObject["created_at"])}</p>
@@ -75,29 +60,26 @@ $(document).ready(function () {
     return tweetTemplate;
   };
 
-  renderTweets(tweetData);
-});
-
-const loadTweets = function() {
+function loadTweets() {
+  renderTweets([]);
   $.ajax({
     method: 'GET',
     url: '/tweets'
   })
     .done((result) => {
-      console.log(result)
-      renderTweets(result)
+      renderTweets(result);
     })
     .fail(err => console.log(err));
 };
 
-loadTweets();
 
-$('.tweet-form').submit(function(event) {
+
+$('#tweet-form').submit(function(event) {
   event.preventDefault();
   // first validate for empty/long tweets
   const $tweetBox = $(this).find('#tweet-text');
   const $counter = $(this).find('.counter');
-  // const emptyMsg = $(this).siblings('.empty-tweet-err');
+ const emptyMsg = $(this).siblings('.empty-tweet-err');
    const longMsg = $(this).siblings('.long-tweet-err');
   if ($tweetBox.val() === "") {
     $(longMsg).slideUp(10);
@@ -121,4 +103,15 @@ $('.tweet-form').submit(function(event) {
       })
       .fail(err => console.log(err));
   }
+});
+
+loadTweets();
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+
 });
