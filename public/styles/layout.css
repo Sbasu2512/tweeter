@@ -28,8 +28,8 @@ body {
   display: grid;
   -ms-grid-columns: 40% 60%;
       grid-template-columns: 40% 60%;
-  -ms-grid-rows: 100px 30% 30% 20%;
-      grid-template-rows: 100px 30% 30% 20%;
+  -ms-grid-rows: 4.16em 30% 30% 20%;
+      grid-template-rows: 4.16em 30% 30% 20%;
   -webkit-column-gap: 2em;
           column-gap: 2em;
   justify-items: stretch;
@@ -291,6 +291,15 @@ header h2 {
         grid-template-columns: 0%;
     -ms-grid-rows: 40% 20% 40%;
         grid-template-rows: 40% 20% 40%;
+    row-gap: 1em;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=layout.css.map */

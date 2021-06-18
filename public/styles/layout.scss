@@ -26,7 +26,7 @@ body {
   font-family: $Source;
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-template-rows: 100px 30% 30% 20%;
+  grid-template-rows: 4.16em 30% 30% 20%;
   column-gap: 2em;
   //row-gap: 2em;
   justify-items: stretch;
@@ -277,12 +277,19 @@ header {
   .body{
     grid-template-columns: 0%;
     grid-template-rows: 40% 20% 40% ;
+    row-gap: 1em;
   }
   //nav
   // |->span
   // |->a
   // |->i class ='fas'
-  
+  nav{
+    display: flex;
+    justify-content: space-between;
+    span{
+
+    }
+  }
   //header
   // |->div class="avatar"
   // |->div class="name"
