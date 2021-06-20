@@ -31,6 +31,7 @@ let tweetData = [
 $(document).ready(function () {
   
   function renderTweets(arr)  {
+    $(".tweets").empty();
     for (let element of arr) {
       const tweet = createTweetElement(element);
       $(".tweets").append(tweet);
