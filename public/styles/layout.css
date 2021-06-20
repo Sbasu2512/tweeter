@@ -21,7 +21,9 @@ body {
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
   height: 100%;
-  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*
@@ -29,8 +31,6 @@ body {
  */
 @media only screen and (min-width: 1025px) {
   body {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: 40% 60%;
         grid-template-columns: 40% 60%;
     -ms-grid-rows: 4.16em 30% 30% 20%;

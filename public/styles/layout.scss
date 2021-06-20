@@ -20,7 +20,8 @@ body {
   font-size: 24px;
   font-family: $Source;
   height: 100%;
-  width: 100vw;
+  // width: 100vw;
+  display: flex;
 }
 
 /*
@@ -29,7 +30,7 @@ body {
 
 @media only screen and (min-width: 1025px) {
   body {
-    display: grid;
+    // display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 4.16em 30% 30% 20%;
     column-gap: 1em;
