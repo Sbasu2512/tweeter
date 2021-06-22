@@ -88,29 +88,28 @@ body {
     .fas {
       order: 3;
       color: $red;
-      
+
       font-size: 0.5em;
       margin-top: 2em;
-     //-webkit-transform: rotate(45deg);
+      //-webkit-transform: rotate(45deg);
     }
-    .fas:before{
-    position: absolute;
-    left: 89%;
-    margin-top: -0.6em;
-    animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-name: arrow;
-  }
-  @keyframes arrow {
-    0% {
-      opacity: 1;
+    .fas:before {
+      position: absolute;
+      left: 89%;
+      margin-top: -0.6em;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-name: arrow;
     }
-    100% {
-      opacity: 0;
-      transform: translate(-10px, -10px);
+    @keyframes arrow {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-10px, -10px);
+      }
     }
-  }
-  
   }
 
   //header
@@ -206,7 +205,7 @@ body {
         #tweet-text {
           width: 80%;
           height: 50%;
-          overflow-wrap: break-word
+          overflow-wrap: break-word;
         }
         .btn {
           background-color: $buttonColor;
@@ -249,7 +248,7 @@ body {
         margin-top: 1em;
         // transition: box-shadow .3s;
         // :hover {
-        //   box-shadow: 0 0 11px rgba(33,33,33,.2); 
+        //   box-shadow: 0 0 11px rgba(33,33,33,.2);
         // }
 
         .useravatar {
@@ -355,13 +354,13 @@ body {
       margin-right: 4em;
       color: $red;
     }
-    .fas:before{
+    .fas:before {
       position: absolute;
       left: 89%;
       margin-top: -0.6em;
       animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: arrow;
+      animation-iteration-count: infinite;
+      animation-name: arrow;
     }
     @keyframes arrow {
       0% {
@@ -445,7 +444,7 @@ body {
         #tweet-text {
           width: 100%;
           margin: 0.5em;
-          overflow-wrap: break-word
+          overflow-wrap: break-word;
         }
         div {
           display: flex;
@@ -483,7 +482,7 @@ body {
         width: 80%;
         // transition: box-shadow .3s;
         // :hover {
-        //   box-shadow: 0 0 11px rgba(33,33,33,.2); 
+        //   box-shadow: 0 0 11px rgba(33,33,33,.2);
         // }
 
         .useravatar {
@@ -544,6 +543,6 @@ body {
 }
 
 .tweet-container :hover {
-  transition: box-shadow .3s;
-  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  transition: box-shadow 0.3s;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }

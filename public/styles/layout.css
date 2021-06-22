@@ -5,14 +5,14 @@
  */
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -32,11 +32,11 @@ body {
 @media only screen and (min-width: 1025px) {
   body {
     -ms-grid-columns: 40% 60%;
-        grid-template-columns: 40% 60%;
+    grid-template-columns: 40% 60%;
     -ms-grid-rows: 4.16em 30% 30% 20%;
-        grid-template-rows: 4.16em 30% 30% 20%;
+    grid-template-rows: 4.16em 30% 30% 20%;
     -webkit-column-gap: 1em;
-            column-gap: 1em;
+    column-gap: 1em;
     row-gap: 1em;
   }
   /*
@@ -46,8 +46,8 @@ body {
  * desktop styles
  ***/
   nav {
-    background-color: #4056A1;
-    color: #FFF;
+    background-color: #4056a1;
+    color: #fff;
     height: 8rem;
     width: 100%;
     font-size: 5rem;
@@ -57,54 +57,54 @@ body {
     position: fixed;
     z-index: 10;
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     grid-column-end: 3;
     -ms-grid-row: 1;
-        grid-row-start: 1;
+    grid-row-start: 1;
     grid-row-end: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
   nav span {
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
     justify-self: flex-start;
     float: left;
     clear: right;
     font-family: "Bungee", sans-serif;
     line-height: 1em;
     -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+    order: 1;
     -webkit-box-flex: 3;
-        -ms-flex-positive: 3;
-            flex-grow: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3;
   }
   nav a {
     -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -ms-flex-order: 2;
+    order: 2;
     font-size: 0.5em;
     float: right;
     margin-right: -3em;
   }
   nav .fas {
     -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-    color: #ED3D33;
+    -ms-flex-order: 3;
+    order: 3;
+    color: #ed3d33;
     font-size: 0.5em;
     margin-top: 2em;
   }
@@ -113,11 +113,11 @@ body {
     left: 89%;
     margin-top: -0.6em;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     -webkit-animation-name: arrow;
-            animation-name: arrow;
+    animation-name: arrow;
   }
   @-webkit-keyframes arrow {
     0% {
@@ -126,7 +126,7 @@ body {
     100% {
       opacity: 0;
       -webkit-transform: translate(-10px, -10px);
-              transform: translate(-10px, -10px);
+      transform: translate(-10px, -10px);
     }
   }
   @keyframes arrow {
@@ -136,20 +136,20 @@ body {
     100% {
       opacity: 0;
       -webkit-transform: translate(-10px, -10px);
-              transform: translate(-10px, -10px);
+      transform: translate(-10px, -10px);
     }
   }
   header {
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     grid-column-end: 2;
     -ms-grid-row: 2;
-        grid-row-start: 2;
+    grid-row-start: 2;
     grid-row-end: 4;
-    background-color: #D89939;
+    background-color: #d89939;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     margin-top: 4em;
     margin-left: 0.5em;
     display: -webkit-box;
@@ -157,23 +157,23 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     /* flex-wrap: nowrap; */
     /* align-content: center; */
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   header .avatar {
     top: 10%;
     margin-top: 8em;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-left: 5em;
   }
   header .avatar img {
@@ -183,14 +183,14 @@ body {
   header h2 {
     margin-left: 1em;
     margin-top: -1em;
-    color: #FFF;
+    color: #fff;
   }
   .container {
     -ms-grid-column: 2;
-        grid-column-start: 2;
+    grid-column-start: 2;
     grid-column-end: 2;
     -ms-grid-row: 2;
-        grid-row-start: 2;
+    grid-row-start: 2;
     grid-row-end: 3;
     height: 100vh;
     display: -webkit-box;
@@ -198,18 +198,18 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-flex: 1.5;
-        -ms-flex: 1.5;
-            flex: 1.5;
+    -ms-flex: 1.5;
+    flex: 1.5;
     margin-top: 4em;
   }
   .container .new-tweet {
     width: 80%;
   }
   .container .new-tweet h4 {
-    color: #ED3D33;
+    color: #ed3d33;
     font-size: 1em;
     margin-top: 1em;
     display: none;
@@ -227,9 +227,9 @@ body {
     overflow-wrap: break-word;
   }
   .container .new-tweet #tweet-form .btn {
-    background-color: #4152A1;
+    background-color: #4152a1;
     font-family: "Bungee", sans-serif;
-    color: #FFF;
+    color: #fff;
     margin: 0.5em;
     float: left;
   }
@@ -244,11 +244,11 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
   }
   .container .tweets .tweet-container {
     border: 2px black solid;
@@ -275,11 +275,11 @@ body {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
   .container .tweets .tweet-container .date-flags-container .datecreated {
     margin: 0.5em;
@@ -290,27 +290,27 @@ body {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     margin: 0.5em;
   }
   .container .tweets .tweet-container .date-flags-container p {
     margin: 0.1em;
   }
   .container .tweets .tweet-container .date-flags-container p :hover {
-    color: #CA9825;
+    color: #ca9825;
   }
   .container .tweets .tweet-container .date-flags-container p {
     margin: 0.1em;
   }
   .container .tweets .tweet-container .date-flags-container p :hover {
-    color: #CA9825;
+    color: #ca9825;
   }
   .container .tweets .tweet-container .date-flags-container p {
     margin: 0.1em;
   }
   .container .tweets .tweet-container .date-flags-container p :hover {
-    color: #CA9825;
+    color: #ca9825;
   }
 }
 
@@ -322,71 +322,71 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -ms-grid-rows: 10% 30% 20% 40%;
-        grid-template-rows: 10% 30% 20% 40%;
+    grid-template-rows: 10% 30% 20% 40%;
   }
   nav {
     -ms-grid-row: 1;
-        grid-row-start: 1;
+    grid-row-start: 1;
     grid-row-end: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #D89939;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #d89939;
   }
   nav span {
     font-size: 2em;
     -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
     -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+    order: 1;
     margin: 0.5em;
     font-family: "Bungee", sans-serif;
-    color: #FFF;
+    color: #fff;
   }
   nav a {
     -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -ms-flex-order: 2;
+    order: 2;
     margin-right: -4em;
     float: right;
     font-family: "Source Sans Pro", sans-serif;
-    color: #FFF;
+    color: #fff;
   }
   nav .fas {
     -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    -ms-flex-order: 3;
+    order: 3;
     margin-top: 2em;
     margin-right: 4em;
-    color: #ED3D33;
+    color: #ed3d33;
   }
   nav .fas:before {
     position: absolute;
     left: 89%;
     margin-top: -0.6em;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     -webkit-animation-name: arrow;
-            animation-name: arrow;
+    animation-name: arrow;
   }
   @-webkit-keyframes arrow {
     0% {
@@ -395,7 +395,7 @@ body {
     100% {
       opacity: 0;
       -webkit-transform: translate(-10px, -10px);
-              transform: translate(-10px, -10px);
+      transform: translate(-10px, -10px);
     }
   }
   @keyframes arrow {
@@ -405,52 +405,52 @@ body {
     100% {
       opacity: 0;
       -webkit-transform: translate(-10px, -10px);
-              transform: translate(-10px, -10px);
+      transform: translate(-10px, -10px);
     }
   }
   header {
     -ms-grid-row: 2;
-        grid-row-start: 2;
+    grid-row-start: 2;
     grid-row-end: 2;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #D89939;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #d89939;
   }
   header h2 {
-    color: #FFF;
+    color: #fff;
   }
   .container {
     -ms-grid-row: 3;
-        grid-row-start: 3;
+    grid-row-start: 3;
     grid-row-end: 5;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-top: 2em;
     margin-left: 5em;
   }
@@ -469,13 +469,13 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: 20em;
   }
   .container .new-tweet #tweet-form #tweet-text {
@@ -489,24 +489,24 @@ body {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: 100%;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
   .container .new-tweet #tweet-form div .btn {
-    color: #FFF;
+    color: #fff;
     font-family: "Bungee", sans-serif;
-    background-color: #4152A1;
+    background-color: #4152a1;
   }
   .container .new-tweet #tweet-form div .counter {
     font-family: "Bungee", sans-serif;
@@ -517,18 +517,18 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     width: 100%;
   }
   .container .tweets .tweet-container {
@@ -542,13 +542,13 @@ body {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     margin: 0.5em;
   }
   .container .tweets .tweet-container .useravatar .username {
@@ -569,18 +569,18 @@ body {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin: 0.5em;
   }
   .container .tweets .tweet-container .date-flags-container .flags-container {
@@ -589,35 +589,68 @@ body {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
-  .container .tweets .tweet-container .date-flags-container .flags-container .like {
+  .container
+    .tweets
+    .tweet-container
+    .date-flags-container
+    .flags-container
+    .like {
     margin: 0.2em;
   }
-  .container .tweets .tweet-container .date-flags-container .flags-container .like :hover {
-    color: #CA9825;
+  .container
+    .tweets
+    .tweet-container
+    .date-flags-container
+    .flags-container
+    .like
+    :hover {
+    color: #ca9825;
   }
-  .container .tweets .tweet-container .date-flags-container .flags-container .retweet {
+  .container
+    .tweets
+    .tweet-container
+    .date-flags-container
+    .flags-container
+    .retweet {
     margin: 0.2em;
   }
-  .container .tweets .tweet-container .date-flags-container .flags-container .retweet :hover {
-    color: #CA9825;
+  .container
+    .tweets
+    .tweet-container
+    .date-flags-container
+    .flags-container
+    .retweet
+    :hover {
+    color: #ca9825;
   }
-  .container .tweets .tweet-container .date-flags-container .flags-container .flag {
+  .container
+    .tweets
+    .tweet-container
+    .date-flags-container
+    .flags-container
+    .flag {
     margin: 0.2em;
   }
-  .container .tweets .tweet-container .date-flags-container .flags-container .flag :hover {
-    color: #CA9825;
+  .container
+    .tweets
+    .tweet-container
+    .date-flags-container
+    .flags-container
+    .flag
+    :hover {
+    color: #ca9825;
   }
 }
 
 .tweet-container :hover {
-  -webkit-transition: -webkit-box-shadow .3s;
-  transition: -webkit-box-shadow .3s;
-  transition: box-shadow .3s;
-  transition: box-shadow .3s, -webkit-box-shadow .3s;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
   -webkit-box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-          box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 /*# sourceMappingURL=layout.css.map */

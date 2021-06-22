@@ -28,37 +28,39 @@
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- time ago link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- </head>  
+  <!-- time ago link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
 
- <body>
-   <!-- Top nav bar (fixed)  -->
-   <nav>
-     <span>tweeter</span>  
-     <!-- Angled double down arrow icon  -->
-     <a><strong>Write</strong> a new tweet</a>
-     <i class="fas fa-angle-double-down"></i>
-  </nav> 
+<body>
+  <!-- Top nav bar (fixed)  -->
+  <nav>
+    <span>tweeter</span>
+    <!-- Angled double down arrow icon  -->
+    <a><strong>Write</strong> a new tweet</a>
+    <i class="fas fa-angle-double-down"></i>
+  </nav>
 
   <header>
     <div class="avatar">
-        <img src="/images/profile-hex.png"> 
+      <img src="/images/profile-hex.png">
     </div>
     <br>
     <div class="name">
-        <h2>Amy Mansell</h2>
+      <h2>Amy Mansell</h2>
     </div>
-</header>
+  </header>
 
-   <!-- Page-specific (main) content here  -->
-   <main class="container">
+  <!-- Page-specific (main) content here  -->
+  <main class="container">
     <section class="new-tweet">
       <h4 class="empty-tweet-err">You cannot send an empty tweet!</h4>
       <h4 class="long-tweet-err">Your message is too long! Keep it under 140 characters.</h4>
 
       <h2>Compose Tweet</h2>
-      <form Content-Type ='application/x-www-form-urlencoded' method='POST' action='/tweets/' id='tweet-form'>
+      <form Content-Type='application/x-www-form-urlencoded' method='POST' action='/tweets/' id='tweet-form'>
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div>
           <button class="btn" type="submit">Tweet</button>
@@ -66,13 +68,14 @@
         </div>
       </form>
     </section>
-    
+
     <!-- This is where we are appending -->
     <article class='tweets'></article>
     <!-- <button id="to-top"><i class="fas fa-angle-double-up"></i></button> -->
-   </main>  
-</body>  
+  </main>
+</body>
 
-<script src = "scripts/composer-char-counter.js"></script>
+<script src="scripts/composer-char-counter.js"></script>
 <!-- <script src=""></script> -->
+
 </html>

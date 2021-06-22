@@ -8,21 +8,20 @@ function charCounter(string) {
 }
 
 $(document).ready(function () {
-  // --- our code goes here ---
-  //console.log("page hass loaded & ready to be manipulated!");
+  
   let input = document.querySelector('#tweet-text');;
   let count = document.querySelector('.counter');
   let tweetBtn = document.querySelector("#btn"); 
   input.addEventListener("keydown", () => {
    
     let humanInput = input.value;
-    //console.log(humanInput);
+    
     let output = charCounter(humanInput);
-    //console.log(output);
+    
    if(output > 140){
     count.innerHTML = 140 - output ;
      count.style.color = 'red';
-     tweetBtn.attr("disabled");     //this is not working..why? 
+     tweetBtn.attr("disabled");     
    } else {
      count.innerHTML = 140 - output ;
      count.style.color = 'black';
