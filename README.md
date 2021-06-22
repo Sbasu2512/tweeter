@@ -18,11 +18,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-![Tablet Landing page](/Screenshots/pic 2.jpg)
+![Tablet Landing page](Screenshots/pic 2.jpg)
 
-![Tablet Tweet Preview](/Screenshots/picture 1.jpg)
+![Tablet Tweet Preview](Screenshots/picture 1.jpg)
 
-![Tweeter Desktop Landing Page](/Screenshots/Screen Shot 2021-06-18 at 5.46.14 PM.png)
+![Tweeter Desktop Landing Page](Screenshots/Screen Shot 2021-06-18 at 5.46.14 PM.png)
 
-![Tweeter Desktop Tweets Preview](/Screenshots/Screen Shot 2021-06-18 at 5.46.21 PM.png)
+![Tweeter Desktop Tweets Preview](Screenshots/Screen Shot 2021-06-18 at 5.46.21 PM.png)
 
