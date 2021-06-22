@@ -108,6 +108,37 @@ body {
     font-size: 0.5em;
     margin-top: 2em;
   }
+  nav .fas:before {
+    position: absolute;
+    left: 89%;
+    margin-top: -0.6em;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: arrow;
+            animation-name: arrow;
+  }
+  @-webkit-keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate(-10px, -10px);
+              transform: translate(-10px, -10px);
+    }
+  }
+  @keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate(-10px, -10px);
+              transform: translate(-10px, -10px);
+    }
+  }
   header {
     -ms-grid-column: 1;
         grid-column-start: 1;
@@ -151,7 +182,7 @@ body {
   }
   header h2 {
     margin-left: 1em;
-    margin-top: -0.5em;
+    margin-top: -1em;
     color: #FFF;
   }
   .container {
@@ -193,6 +224,7 @@ body {
   .container .new-tweet #tweet-form #tweet-text {
     width: 80%;
     height: 50%;
+    overflow-wrap: break-word;
   }
   .container .new-tweet #tweet-form .btn {
     background-color: #4152A1;
@@ -294,7 +326,6 @@ body {
             flex-direction: column;
     -ms-grid-rows: 10% 30% 20% 40%;
         grid-template-rows: 10% 30% 20% 40%;
-    row-gap: 1em;
   }
   nav {
     -ms-grid-row: 1;
@@ -345,6 +376,37 @@ body {
     margin-top: 2em;
     margin-right: 4em;
     color: #ED3D33;
+  }
+  nav .fas:before {
+    position: absolute;
+    left: 89%;
+    margin-top: -0.6em;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: arrow;
+            animation-name: arrow;
+  }
+  @-webkit-keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate(-10px, -10px);
+              transform: translate(-10px, -10px);
+    }
+  }
+  @keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: translate(-10px, -10px);
+              transform: translate(-10px, -10px);
+    }
   }
   header {
     -ms-grid-row: 2;
@@ -419,6 +481,7 @@ body {
   .container .new-tweet #tweet-form #tweet-text {
     width: 100%;
     margin: 0.5em;
+    overflow-wrap: break-word;
   }
   .container .new-tweet #tweet-form div {
     display: -webkit-box;
@@ -547,5 +610,14 @@ body {
   .container .tweets .tweet-container .date-flags-container .flags-container .flag :hover {
     color: #CA9825;
   }
+}
+
+.tweet-container :hover {
+  -webkit-transition: -webkit-box-shadow .3s;
+  transition: -webkit-box-shadow .3s;
+  transition: box-shadow .3s;
+  transition: box-shadow .3s, -webkit-box-shadow .3s;
+  -webkit-box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+          box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 /*# sourceMappingURL=layout.css.map */

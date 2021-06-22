@@ -88,9 +88,29 @@ body {
     .fas {
       order: 3;
       color: $red;
+      
       font-size: 0.5em;
       margin-top: 2em;
+     //-webkit-transform: rotate(45deg);
     }
+    .fas:before{
+    position: absolute;
+    left: 89%;
+    margin-top: -0.6em;
+    animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+  }
+  @keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-10px, -10px);
+    }
+  }
+  
   }
 
   //header
@@ -126,7 +146,7 @@ body {
     }
     h2 {
       margin-left: 1em;
-      margin-top: -0.5em;
+      margin-top: -1em;
       color: $white;
     }
   }
@@ -186,6 +206,7 @@ body {
         #tweet-text {
           width: 80%;
           height: 50%;
+          overflow-wrap: break-word
         }
         .btn {
           background-color: $buttonColor;
@@ -226,6 +247,10 @@ body {
       .tweet-container {
         border: 2px black solid;
         margin-top: 1em;
+        // transition: box-shadow .3s;
+        // :hover {
+        //   box-shadow: 0 0 11px rgba(33,33,33,.2); 
+        // }
 
         .useravatar {
           margin: 0.5em;
@@ -288,13 +313,13 @@ body {
     }
   }
 }
+
 @media only screen and (max-width: 1024px) {
   /* Write Tablet only CSS here */
   body {
     display: flex;
     flex-direction: column;
     grid-template-rows: 10% 30% 20% 40%;
-    row-gap: 1em;
   }
   //nav
   // |->span
@@ -329,6 +354,23 @@ body {
       margin-top: 2em;
       margin-right: 4em;
       color: $red;
+    }
+    .fas:before{
+      position: absolute;
+      left: 89%;
+      margin-top: -0.6em;
+      animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+    }
+    @keyframes arrow {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-10px, -10px);
+      }
     }
   }
   //header
@@ -403,6 +445,7 @@ body {
         #tweet-text {
           width: 100%;
           margin: 0.5em;
+          overflow-wrap: break-word
         }
         div {
           display: flex;
@@ -424,6 +467,7 @@ body {
         }
       }
     }
+    //article class
     .tweets {
       display: flex;
       flex-direction: column;
@@ -437,6 +481,10 @@ body {
         border: 2px black solid;
         margin: 0.5em;
         width: 80%;
+        // transition: box-shadow .3s;
+        // :hover {
+        //   box-shadow: 0 0 11px rgba(33,33,33,.2); 
+        // }
 
         .useravatar {
           display: flex;
@@ -493,4 +541,9 @@ body {
       }
     }
   }
+}
+
+.tweet-container :hover {
+  transition: box-shadow .3s;
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
