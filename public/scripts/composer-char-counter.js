@@ -14,17 +14,19 @@ $(document).ready(function () {
   let count = document.querySelector('.counter');
   let tweetBtn = document.querySelector("#btn"); 
   input.addEventListener("keydown", () => {
-    let key = count.keyCode || count.charCode ;
+   
     let humanInput = input.value;
     //console.log(humanInput);
     let output = charCounter(humanInput);
-    console.log(output);
+    //console.log(output);
    if(output > 140){
     count.innerHTML = 140 - output ;
      count.style.color = 'red';
      tweetBtn.attr("disabled");     //this is not working..why? 
    } else {
      count.innerHTML = 140 - output ;
+     count.style.color = 'black';
+     tweetBtn.removeAttribute("disabled");
    }
   });
 }, false);
