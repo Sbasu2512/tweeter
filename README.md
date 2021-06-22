@@ -19,7 +19,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-![Tablet Landing page](/Screenshots/pic 2.jpg)
+![Tablet Landing page](https://github.com/Sbasu2512/tweeter/blob/master/Screenshots/Screen%20Shot%202021-06-18%20at%205.46.14%20PM.png)
 
 ![Tablet Tweet Preview](Screenshots/picture 1.jpg)
 
