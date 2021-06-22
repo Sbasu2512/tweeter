@@ -19,11 +19,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-![Tablet Landing page](https://github.com/Sbasu2512/tweeter/blob/master/Screenshots/Screen%20Shot%202021-06-18%20at%205.46.14%20PM.png)
+![Tablet Landing page](https://github.com/Sbasu2512/tweeter/blob/master/Screenshots/pic%202.jpg)
 
-![Tablet Tweet Preview](Screenshots/picture 1.jpg)
+![Tablet Tweet Preview](https://github.com/Sbasu2512/tweeter/blob/master/Screenshots/picture%201.jpg)
 
-![Tweeter Desktop Landing Page](Screenshots/Screen Shot 2021-06-18 at 5.46.14 PM.png)
+![Tweeter Desktop Landing Page](https://github.com/Sbasu2512/tweeter/blob/master/Screenshots/Screen%20Shot%202021-06-18%20at%205.46.14%20PM.png)
 
-![Tweeter Desktop Tweets Preview](Screenshots/Screen Shot 2021-06-18 at 5.46.21 PM.png)
+![Tweeter Desktop Tweets Preview](https://github.com/Sbasu2512/tweeter/blob/master/Screenshots/Screen%20Shot%202021-06-18%20at%205.46.21%20PM.png)
 
