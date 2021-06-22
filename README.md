@@ -19,7 +19,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-![Tablet Landing page](Screenshots/pic 2.jpg)
+![Tablet Landing page](/Screenshots/pic 2.jpg)
 
 ![Tablet Tweet Preview](Screenshots/picture 1.jpg)
 
